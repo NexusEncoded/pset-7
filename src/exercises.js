@@ -2,8 +2,16 @@ function commonEnd(a, b) {
   if (!a || a.length === 0 || !b || b.length === 0) {
     return false;
   }
-
+const listA = a[a.length-1];
+const listB = b[b.length-1];
   // write your code here
+  if (a[0] === b[0]){
+    return true
+  }else if (listA === listB) {
+    return true
+  }else {
+    return false
+  }
 }
 
 function endsMeet(values, n) {
