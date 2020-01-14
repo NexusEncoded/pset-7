@@ -16,10 +16,43 @@ const listB = b[b.length-1];
 
 function endsMeet(values, n) {
   // write your code here
+  let array = []
+
+    if (!values || values.length < n || !Number.isInteger(n) || n < 0) {
+      return array;
+    } else {
+        if (n === 0) {
+          return values;
+        }
+
+        for (let i = 0; i < n; i++) {
+          if (values[i] !== undefined) {
+            array.push(values[i])
+          }
+        }
+
+        for (let i = n; i > 0; i--) {
+          if (values[values.length - i] !== undefined) {
+            array.push(values[values.length - i])
+          }
+        }
+        return array;
+    }
 }
 
 function difference(numbers) {
   // write your code here
+  if (numbers == undefined || numbers < 1 || numbers.some(isNaN)) {
+   return undefined;
+ } else {
+
+   let bigInteger = Math.max.apply(null, numbers)
+   let smallInteger = Math.min.apply(null, numbers)
+
+   let difference = bigInteger - smallInteger
+
+   return difference
+ }
 }
 
 function max(number) {
