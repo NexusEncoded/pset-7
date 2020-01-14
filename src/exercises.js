@@ -57,6 +57,25 @@ function difference(numbers) {
 
 function max(number) {
   // write your code here
+  if (number == undefined || number <= 2 || number.some(isNaN)) {
+
+    return undefined;
+
+  } else if (number.length % 2 == 0) {
+
+    return undefined;
+
+  } else {
+     let lastElement = number[number.length - 1]
+     let middleElement = number[number.length - (Math.ceil(number.length / 2))]
+     let firstElement = number[0]
+
+     let array = [firstElement, middleElement, lastElement]
+
+     let largestValue = Math.max.apply(null, array)
+
+     return largestValue;
+  }
 }
 
 function middle(values) {
