@@ -80,6 +80,26 @@ function max(number) {
 
 function middle(values) {
   // write your code here
+  let array = [];
+
+  if (values == undefined) {
+
+    return [];
+
+  } else if (values.length < 3) {
+
+    return [];
+
+  } else if (values.length % 2 == 0) {
+    return [];
+  } else {
+    let veryMiddleElement = values[values.length - (Math.ceil(values.length / 2))]
+    let leftMiddleElement = values[(values.length - 1) - (Math.ceil(values.length / 2))]
+
+    array.push(leftMiddleElement, veryMiddleElement)
+
+    return array;
+  }
 }
 
 function increasing(numbers) {
